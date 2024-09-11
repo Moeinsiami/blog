@@ -11,3 +11,7 @@ def post_list(request):
 
 def post_detail(request):
     pass
+
+
+def test(request):
+    pass
