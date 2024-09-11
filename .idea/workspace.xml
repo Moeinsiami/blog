@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="register post model in admin panel">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3eab6dd-defd-423e-a37c-2b8b27365150.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e3eab6dd-defd-423e-a37c-2b8b27365150.xml" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="admin panel customize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,9 @@
       <workItem from="1725967829559" duration="1557000" />
       <workItem from="1725969742333" duration="1879000" />
       <workItem from="1725974396023" duration="686000" />
-      <workItem from="1726003197425" duration="1212000" />
+      <workItem from="1726003197425" duration="1451000" />
+      <workItem from="1726048680076" duration="659000" />
+      <workItem from="1726056241543" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -203,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725909202594</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1726004864360</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726004864360</updated>
+    </task>
+    <task id="LOCAL-00013" summary="admin panel customize">
+      <option name="closed" value="true" />
+      <created>1726004893279</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726004893279</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,8 +241,9 @@
     <MESSAGE value="create post models.py" />
     <MESSAGE value="null" />
     <MESSAGE value="migrate" />
-    <MESSAGE value="." />
     <MESSAGE value="register post model in admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="register post model in admin panel" />
+    <MESSAGE value="." />
+    <MESSAGE value="admin panel customize" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin panel customize" />
   </component>
 </project>
