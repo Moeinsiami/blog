@@ -15,7 +15,7 @@ class Post(models.Model):
         PUBLISHED = 'PB', 'Published'
         REJECTED = 'RJ', 'Rejected'
     # relations
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_posts")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_posts", verbose_name="نویسنده")
     # date fields
     title = models.CharField(max_length=250)
     description = models.TextField()
@@ -35,6 +35,8 @@ class Post(models.Model):
         indexes = [
             models.Index(fields=['-publish']),
         ]
+        verbose_name = "پست"
+        verbose_name_plural = "پست ها"
 
     def __str__(self):
         return self.title
