@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from blog.models import Post
-from django.http import Http404
 
 
 def index(request):
@@ -12,7 +11,7 @@ def post_list(request):
     context = {
         'posts': posts,
     }
-    render(request, 'blog/list.html', context)
+    return render(request, 'blog/list.html', context)
 
 
 def post_detail(request, id):
@@ -20,4 +19,4 @@ def post_detail(request, id):
     context = {
         'post': post,
     }
-    render(request, 'blog/detail.html', context)
+    return render(request, 'blog/detail.html', context)
