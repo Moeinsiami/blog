@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="change to class-based view">
-      <change afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/forms/ticket.html" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0003_ticket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/forms/ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/forms/ticket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -149,7 +151,8 @@
       <workItem from="1726420708341" duration="2140000" />
       <workItem from="1726441941072" duration="1132000" />
       <workItem from="1726483754889" duration="4172000" />
-      <workItem from="1726512848152" duration="2388000" />
+      <workItem from="1726512848152" duration="2627000" />
+      <workItem from="1726601085869" duration="3402000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -471,7 +474,55 @@
       <option name="project" value="LOCAL" />
       <updated>1726485568690</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="create from">
+      <option name="closed" value="true" />
+      <created>1726517678958</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517678958</updated>
+    </task>
+    <task id="LOCAL-00042" summary="create ticket class">
+      <option name="closed" value="true" />
+      <created>1726517704084</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517704084</updated>
+    </task>
+    <task id="LOCAL-00043" summary="create ticket.html">
+      <option name="closed" value="true" />
+      <created>1726517738474</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517738474</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add ticket url">
+      <option name="closed" value="true" />
+      <created>1726517764786</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517764786</updated>
+    </task>
+    <task id="LOCAL-00045" summary="define ticket function">
+      <option name="closed" value="true" />
+      <created>1726517810022</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517810022</updated>
+    </task>
+    <task id="LOCAL-00046" summary=".">
+      <option name="closed" value="true" />
+      <created>1726517815735</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517815735</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,11 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add blog app" />
-    <MESSAGE value="create post models.py" />
-    <MESSAGE value="null" />
-    <MESSAGE value="register post model in admin panel" />
-    <MESSAGE value="admin panel customize" />
     <MESSAGE value="create publish manager" />
     <MESSAGE value="create blog urls" />
     <MESSAGE value="add blog/ url for blog app" />
@@ -509,11 +555,16 @@
     <MESSAGE value="migrate" />
     <MESSAGE value="jalali date manipulate" />
     <MESSAGE value="add css stuff" />
-    <MESSAGE value="." />
     <MESSAGE value="add stuff" />
     <MESSAGE value="add reverse" />
     <MESSAGE value="add return before render in post_list and post_detail" />
     <MESSAGE value="change to class-based view" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to class-based view" />
+    <MESSAGE value="create from" />
+    <MESSAGE value="create ticket class" />
+    <MESSAGE value="create ticket.html" />
+    <MESSAGE value="add ticket url" />
+    <MESSAGE value="define ticket function" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
