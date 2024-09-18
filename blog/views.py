@@ -44,8 +44,9 @@ class PostDetailView(DetailView):
 
 
 def ticket(request):
-    ticket_obj = Ticket.objects.create()
+
     if request.method == "POST":
+        ticket_obj = Ticket.objects.create()
         form = TicketForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
@@ -55,7 +56,7 @@ def ticket(request):
             ticket_obj.phone = cd['phone']
             ticket_obj.subject = cd['subject']
             ticket_obj.save()
-            redirect('blog:index')
+            return redirect('blog:index')
     else:
         form = TicketForm()
     return render(request, 'forms/ticket.html',{'form':form})
