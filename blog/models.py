@@ -16,6 +16,7 @@ class Post(models.Model):
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PB', 'Published'
         REJECTED = 'RJ', 'Rejected'
+
     # relations
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_posts", verbose_name="نویسنده")
     # date fields
@@ -53,4 +54,11 @@ class Ticket(models.Model):
     name = models.CharField(max_length=250, verbose_name='نام')
     email = models.EmailField(verbose_name='ایمیل')
     phone = models.CharField(max_length=11, verbose_name='شماره تماس')
-    subject = models.CharField(max_length=250,verbose_name='موضوع')
+    subject = models.CharField(max_length=250, verbose_name='موضوع')
+
+    class Meta:
+        verbose_name = "تیکت"
+        verbose_name_plural = "تیکت ها"
+
+    def __str__(self):
+        return self.subject
