@@ -21,3 +21,7 @@ class PostAdmin(admin.ModelAdmin):
     list_editable = ['status']
     # list_display_links = ['author']
 
+
+@admin.register(Ticket)
+class TicketAdmin(admin.ModelAdmin):
+    list_display = ['name', 'subject', 'phone']
