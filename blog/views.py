@@ -46,16 +46,17 @@ class PostDetailView(DetailView):
 def ticket(request):
 
     if request.method == "POST":
-        ticket_obj = Ticket.objects.create()
+
         form = TicketForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            ticket_obj.message = cd['message']
-            ticket_obj.name = cd['name']
-            ticket_obj.email = cd['email']
-            ticket_obj.phone = cd['phone']
-            ticket_obj.subject = cd['subject']
-            ticket_obj.save()
+            Ticket.objects.create(message=cd['message'], name=cd['name'], email=cd['email'],phone=cd['phone'], subject=cd['subject'])
+            # ticket_obj.message = cd['message']
+            # ticket_obj.name = cd['name']
+            # ticket_obj.email = cd['email']
+            # ticket_obj.phone = cd['phone']
+            # ticket_obj.subject = cd['subject']
+            # ticket_obj.save()
             return redirect('blog:index')
     else:
         form = TicketForm()
