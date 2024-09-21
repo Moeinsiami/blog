@@ -1,5 +1,5 @@
 from django import forms
-
+from blog.models import Comment
 
 class TicketForm(forms.Form):
     SUBJECT_CHOICES = (
@@ -21,3 +21,10 @@ class TicketForm(forms.Form):
                 raise forms.ValidationError("شماره تلفن عددی نیست!")
             else:
                 return phone
+
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['name', 'body']
