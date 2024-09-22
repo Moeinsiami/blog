@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="some changes">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0004_alter_ticket_options_comment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3eab6dd-defd-423e-a37c-2b8b27365150.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e3eab6dd-defd-423e-a37c-2b8b27365150.xml" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/blog/templates/forms/comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,46 +156,8 @@
       <workItem from="1726776714749" duration="2179000" />
       <workItem from="1726836462251" duration="1316000" />
       <workItem from="1726861707115" duration="2739000" />
-    </task>
-    <task id="LOCAL-00008" summary="migrate">
-      <option name="closed" value="true" />
-      <created>1725904647632</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1725904647632</updated>
-    </task>
-    <task id="LOCAL-00009" summary="migrate">
-      <option name="closed" value="true" />
-      <created>1725906839418</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1725906839418</updated>
-    </task>
-    <task id="LOCAL-00010" summary=".">
-      <option name="closed" value="true" />
-      <created>1725909165321</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1725909165321</updated>
-    </task>
-    <task id="LOCAL-00011" summary="register post model in admin panel">
-      <option name="closed" value="true" />
-      <created>1725909202594</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1725909202594</updated>
-    </task>
-    <task id="LOCAL-00012" summary=".">
-      <option name="closed" value="true" />
-      <created>1726004864360</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1726004864360</updated>
+      <workItem from="1726952002640" duration="2326000" />
+      <workItem from="1727033991453" duration="2721000" />
     </task>
     <task id="LOCAL-00013" summary="admin panel customize">
       <option name="closed" value="true" />
@@ -550,7 +511,47 @@
       <option name="project" value="LOCAL" />
       <updated>1726836544813</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="migrate">
+      <option name="closed" value="true" />
+      <created>1726952019660</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1726952019660</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add comment to admin">
+      <option name="closed" value="true" />
+      <created>1726952129627</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1726952129627</updated>
+    </task>
+    <task id="LOCAL-00059" summary="new records">
+      <option name="closed" value="true" />
+      <created>1726952143737</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1726952143737</updated>
+    </task>
+    <task id="LOCAL-00060" summary="some changes">
+      <option name="closed" value="true" />
+      <created>1726952164029</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1726952164029</updated>
+    </task>
+    <task id="LOCAL-00061" summary=".">
+      <option name="closed" value="true" />
+      <created>1726952170349</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1726952170349</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,8 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update view" />
-    <MESSAGE value="create base.css" />
     <MESSAGE value="create footer.html for base page" />
     <MESSAGE value="create footer, header, nav for base page" />
     <MESSAGE value="create base page" />
@@ -586,13 +585,15 @@
     <MESSAGE value="create ticket class" />
     <MESSAGE value="add ticket url" />
     <MESSAGE value="define ticket function" />
-    <MESSAGE value="migrate" />
     <MESSAGE value="register ticketadmin" />
     <MESSAGE value="change charfield to choisefield" />
     <MESSAGE value="add stuff to ticket class" />
     <MESSAGE value="create ticket.html" />
-    <MESSAGE value="." />
+    <MESSAGE value="migrate" />
+    <MESSAGE value="add comment to admin" />
+    <MESSAGE value="new records" />
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
