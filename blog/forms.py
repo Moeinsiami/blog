@@ -1,6 +1,7 @@
 from django import forms
 from blog.models import Comment
 
+
 class TicketForm(forms.Form):
     SUBJECT_CHOICES = (
         ('پیشنهاد', 'پیشنهاد'),
@@ -15,16 +16,22 @@ class TicketForm(forms.Form):
     subject = forms.ChoiceField(choices=SUBJECT_CHOICES)
 
     def clean_phone(self):
+        name = self.cleaned_data['name']
+        if name:
+            if len(name) < 3:
+                raise forms.ValidationError("name error")
+            else:
+                return name
+
+
+class CommentForm(forms.ModelForm):
+    def clean_name(self):
         phone = self.cleaned_data['phone']
         if phone:
             if not phone.isnumeric():
                 raise forms.ValidationError("شماره تلفن عددی نیست!")
             else:
                 return phone
-
-
-
-class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['name', 'body']
