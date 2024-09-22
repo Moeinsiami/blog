@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
-
+from django.views.decorators.http import require_POST
 from blog.models import *
 from blog.forms import *
 
@@ -31,16 +31,20 @@ class PostListView(ListView):
     context_object_name = 'posts'
 
 
-# def post_detail(request, id):
-#     post = get_object_or_404(Post, id=id, status=Post.Status.PUBLISHED)
-#     context = {
-#         'post': post,
-#     }
-#     return render(request, 'blog/detail.html', context)
+def post_detail(request, pk):
+    post = get_object_or_404(Post, id=pk, status=Post.Status.PUBLISHED)
+    form = CommentForm()
+    comments = post.comments.filter(active=True)
+    context = {
+        'post': post,
+        'form': form,
+        'comments': comments,
+    }
+    return render(request, 'blog/detail.html', context)
 
-class PostDetailView(DetailView):
-    model = Post
-    template_name = 'blog/detail.html'
+# class PostDetailView(DetailView):
+#     model = Post
+#     template_name = 'blog/detail.html'
 
 
 def ticket(request):
@@ -61,3 +65,20 @@ def ticket(request):
     else:
         form = TicketForm()
     return render(request, 'forms/ticket.html',{'form':form})
+
+
+@require_POST
+def post_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    comment = None
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.save()
+    context = {
+            'post': post,
+            'form': form,
+            'comment': comment,
+        }
+    return render(request,'forms/comment.html', context)
