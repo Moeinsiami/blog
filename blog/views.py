@@ -6,7 +6,8 @@ from blog.forms import *
 
 
 def index(request):
-    pass
+
+    return render(request, 'blog/index.html')
 
 
 # def post_list(request):
