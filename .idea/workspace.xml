@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/blog/templates/forms/comment.html" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="change method">
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0005_post_reading_time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/partials/latest_posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,55 +160,8 @@
       <workItem from="1726836462251" duration="1316000" />
       <workItem from="1726861707115" duration="2739000" />
       <workItem from="1726952002640" duration="2326000" />
-      <workItem from="1727033991453" duration="2721000" />
-    </task>
-    <task id="LOCAL-00013" summary="admin panel customize">
-      <option name="closed" value="true" />
-      <created>1726004893279</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1726004893279</updated>
-    </task>
-    <task id="LOCAL-00014" summary="create publish manager">
-      <option name="closed" value="true" />
-      <created>1726078785846</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1726078785846</updated>
-    </task>
-    <task id="LOCAL-00015" summary=".">
-      <option name="closed" value="true" />
-      <created>1726078792440</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1726078792440</updated>
-    </task>
-    <task id="LOCAL-00016" summary="create blog urls">
-      <option name="closed" value="true" />
-      <created>1726084101923</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1726084101923</updated>
-    </task>
-    <task id="LOCAL-00017" summary="add blog/ url for blog app">
-      <option name="closed" value="true" />
-      <created>1726084134550</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1726084134550</updated>
-    </task>
-    <task id="LOCAL-00018" summary="some stuff">
-      <option name="closed" value="true" />
-      <created>1726084147029</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1726084147029</updated>
+      <workItem from="1727033991453" duration="3217000" />
+      <workItem from="1727199183740" duration="5193000" />
     </task>
     <task id="LOCAL-00019" summary=".">
       <option name="closed" value="true" />
@@ -551,7 +507,55 @@
       <option name="project" value="LOCAL" />
       <updated>1726952170349</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="create comment.html">
+      <option name="closed" value="true" />
+      <created>1727037054180</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037054180</updated>
+    </task>
+    <task id="LOCAL-00063" summary=".">
+      <option name="closed" value="true" />
+      <created>1727037061626</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037061626</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add stuff to detail.html">
+      <option name="closed" value="true" />
+      <created>1727037129212</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037129212</updated>
+    </task>
+    <task id="LOCAL-00065" summary="add validation">
+      <option name="closed" value="true" />
+      <created>1727037152509</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037152509</updated>
+    </task>
+    <task id="LOCAL-00066" summary="add comment url and change post_detail">
+      <option name="closed" value="true" />
+      <created>1727037194666</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037194666</updated>
+    </task>
+    <task id="LOCAL-00067" summary="change method">
+      <option name="closed" value="true" />
+      <created>1727037226460</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037226460</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,11 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create footer.html for base page" />
-    <MESSAGE value="create footer, header, nav for base page" />
-    <MESSAGE value="create base page" />
-    <MESSAGE value="define post_list and post_detail" />
-    <MESSAGE value="farsi" />
     <MESSAGE value="change post_list" />
     <MESSAGE value="jalali date manipulate" />
     <MESSAGE value="add css stuff" />
@@ -593,7 +592,12 @@
     <MESSAGE value="add comment to admin" />
     <MESSAGE value="new records" />
     <MESSAGE value="some changes" />
+    <MESSAGE value="create comment.html" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="add stuff to detail.html" />
+    <MESSAGE value="add validation" />
+    <MESSAGE value="add comment url and change post_detail" />
+    <MESSAGE value="change method" />
+    <option name="LAST_COMMIT_MESSAGE" value="change method" />
   </component>
 </project>
