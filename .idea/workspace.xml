@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="change method">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0005_post_reading_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/partials/latest_posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0006_alter_comment_created_alter_comment_updated_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzweb/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -161,79 +158,11 @@
       <workItem from="1726861707115" duration="2739000" />
       <workItem from="1726952002640" duration="2326000" />
       <workItem from="1727033991453" duration="3217000" />
-      <workItem from="1727199183740" duration="5193000" />
-    </task>
-    <task id="LOCAL-00019" summary=".">
-      <option name="closed" value="true" />
-      <created>1726084165652</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1726084165652</updated>
-    </task>
-    <task id="LOCAL-00020" summary="update view">
-      <option name="closed" value="true" />
-      <created>1726084750375</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1726084750375</updated>
-    </task>
-    <task id="LOCAL-00021" summary="create base.css">
-      <option name="closed" value="true" />
-      <created>1726160586574</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160586574</updated>
-    </task>
-    <task id="LOCAL-00022" summary="create footer.html for base page">
-      <option name="closed" value="true" />
-      <created>1726160621959</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160621959</updated>
-    </task>
-    <task id="LOCAL-00023" summary="create footer, header, nav for base page">
-      <option name="closed" value="true" />
-      <created>1726160741552</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160741552</updated>
-    </task>
-    <task id="LOCAL-00024" summary="create base page">
-      <option name="closed" value="true" />
-      <created>1726160753316</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160753316</updated>
-    </task>
-    <task id="LOCAL-00025" summary="define post_list and post_detail">
-      <option name="closed" value="true" />
-      <created>1726160799310</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160799310</updated>
-    </task>
-    <task id="LOCAL-00026" summary=".">
-      <option name="closed" value="true" />
-      <created>1726160806968</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160806968</updated>
-    </task>
-    <task id="LOCAL-00027" summary=".">
-      <option name="closed" value="true" />
-      <created>1726160828377</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1726160828377</updated>
+      <workItem from="1727199183740" duration="5897000" />
+      <workItem from="1727253754233" duration="2418000" />
+      <workItem from="1727298865572" duration="1063000" />
+      <workItem from="1727609217628" duration="900000" />
+      <workItem from="1727627920643" duration="2751000" />
     </task>
     <task id="LOCAL-00028" summary="farsi">
       <option name="closed" value="true" />
@@ -555,7 +484,79 @@
       <option name="project" value="LOCAL" />
       <updated>1727037226460</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="migrate">
+      <option name="closed" value="true" />
+      <created>1727208227819</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208227819</updated>
+    </task>
+    <task id="LOCAL-00069" summary=".">
+      <option name="closed" value="true" />
+      <created>1727208243288</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208243288</updated>
+    </task>
+    <task id="LOCAL-00070" summary="new row">
+      <option name="closed" value="true" />
+      <created>1727208263907</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208263907</updated>
+    </task>
+    <task id="LOCAL-00071" summary="add simple tags and a inclusion tag">
+      <option name="closed" value="true" />
+      <created>1727208307896</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208307896</updated>
+    </task>
+    <task id="LOCAL-00072" summary="create index.html">
+      <option name="closed" value="true" />
+      <created>1727208324435</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208324435</updated>
+    </task>
+    <task id="LOCAL-00073" summary="create latest_posts.html">
+      <option name="closed" value="true" />
+      <created>1727208343103</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208343103</updated>
+    </task>
+    <task id="LOCAL-00074" summary="add reading_time to Post">
+      <option name="closed" value="true" />
+      <created>1727208374762</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208374762</updated>
+    </task>
+    <task id="LOCAL-00075" summary="add render to index view">
+      <option name="closed" value="true" />
+      <created>1727208408557</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208408557</updated>
+    </task>
+    <task id="LOCAL-00076" summary=".">
+      <option name="closed" value="true" />
+      <created>1727208414834</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1727208414834</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,12 +574,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change post_list" />
-    <MESSAGE value="jalali date manipulate" />
-    <MESSAGE value="add css stuff" />
-    <MESSAGE value="add stuff" />
-    <MESSAGE value="add reverse" />
-    <MESSAGE value="add return before render in post_list and post_detail" />
     <MESSAGE value="change to class-based view" />
     <MESSAGE value="create from" />
     <MESSAGE value="create ticket class" />
@@ -588,16 +583,22 @@
     <MESSAGE value="change charfield to choisefield" />
     <MESSAGE value="add stuff to ticket class" />
     <MESSAGE value="create ticket.html" />
-    <MESSAGE value="migrate" />
     <MESSAGE value="add comment to admin" />
     <MESSAGE value="new records" />
     <MESSAGE value="some changes" />
     <MESSAGE value="create comment.html" />
-    <MESSAGE value="." />
     <MESSAGE value="add stuff to detail.html" />
     <MESSAGE value="add validation" />
     <MESSAGE value="add comment url and change post_detail" />
     <MESSAGE value="change method" />
-    <option name="LAST_COMMIT_MESSAGE" value="change method" />
+    <MESSAGE value="migrate" />
+    <MESSAGE value="new row" />
+    <MESSAGE value="add simple tags and a inclusion tag" />
+    <MESSAGE value="create index.html" />
+    <MESSAGE value="create latest_posts.html" />
+    <MESSAGE value="add reading_time to Post" />
+    <MESSAGE value="add render to index view" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
