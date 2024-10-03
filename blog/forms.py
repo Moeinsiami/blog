@@ -32,6 +32,11 @@ class CommentForm(forms.ModelForm):
                 raise forms.ValidationError("شماره تلفن عددی نیست!")
             else:
                 return phone
+
     class Meta:
         model = Comment
         fields = ['name', 'body']
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField()
