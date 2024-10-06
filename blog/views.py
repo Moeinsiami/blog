@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.decorators.http import require_POST
@@ -6,7 +7,6 @@ from blog.forms import *
 
 
 def index(request):
-
     return render(request, 'blog/index.html')
 
 
@@ -43,19 +43,20 @@ def post_detail(request, pk):
     }
     return render(request, 'blog/detail.html', context)
 
+
 # class PostDetailView(DetailView):
 #     model = Post
 #     template_name = 'blog/detail.html'
 
 
 def ticket(request):
-
     if request.method == "POST":
 
         form = TicketForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            Ticket.objects.create(message=cd['message'], name=cd['name'], email=cd['email'],phone=cd['phone'], subject=cd['subject'])
+            Ticket.objects.create(message=cd['message'], name=cd['name'], email=cd['email'], phone=cd['phone'],
+                                  subject=cd['subject'])
             # ticket_obj.message = cd['message']
             # ticket_obj.name = cd['name']
             # ticket_obj.email = cd['email']
@@ -65,7 +66,7 @@ def ticket(request):
             return redirect('blog:index')
     else:
         form = TicketForm()
-    return render(request, 'forms/ticket.html',{'form':form})
+    return render(request, 'forms/ticket.html', {'form': form})
 
 
 @require_POST
@@ -78,8 +79,23 @@ def post_comment(request, post_id):
         comment.post = post
         comment.save()
     context = {
-            'post': post,
-            'form': form,
-            'comment': comment,
-        }
-    return render(request,'forms/comment.html', context)
+        'post': post,
+        'form': form,
+        'comment': comment,
+    }
+    return render(request, 'forms/comment.html', context)
+
+
+def post_search(request):
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(data=request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Post.published.filter(Q(title__contains=query) | Q(description__icontains=query))
+    context = {
+        'query': query,
+        'results': results,
+    }
+    return render(request, 'blog/search.html',context)
