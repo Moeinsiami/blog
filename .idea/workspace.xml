@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0006_alter_comment_created_alter_comment_updated_and_more.py" afterDir="false" />
+    <list default="true" id="12702566-29ce-4ba1-976e-3125582b2772" name="Changes" comment="delete csrf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sabzweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzweb/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,79 +159,11 @@
       <workItem from="1727253754233" duration="2418000" />
       <workItem from="1727298865572" duration="1063000" />
       <workItem from="1727609217628" duration="900000" />
-      <workItem from="1727627920643" duration="2751000" />
-    </task>
-    <task id="LOCAL-00028" summary="farsi">
-      <option name="closed" value="true" />
-      <created>1726256754856</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1726256754856</updated>
-    </task>
-    <task id="LOCAL-00029" summary=".">
-      <option name="closed" value="true" />
-      <created>1726256764335</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1726256764335</updated>
-    </task>
-    <task id="LOCAL-00030" summary="change post_list">
-      <option name="closed" value="true" />
-      <created>1726256807627</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1726256807627</updated>
-    </task>
-    <task id="LOCAL-00031" summary="migrate">
-      <option name="closed" value="true" />
-      <created>1726399732901</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1726399732901</updated>
-    </task>
-    <task id="LOCAL-00032" summary="jalali date manipulate">
-      <option name="closed" value="true" />
-      <created>1726399772982</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1726399772982</updated>
-    </task>
-    <task id="LOCAL-00033" summary=".">
-      <option name="closed" value="true" />
-      <created>1726399786174</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1726399786174</updated>
-    </task>
-    <task id="LOCAL-00034" summary=".">
-      <option name="closed" value="true" />
-      <created>1726399828619</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1726399828619</updated>
-    </task>
-    <task id="LOCAL-00035" summary="add css stuff">
-      <option name="closed" value="true" />
-      <created>1726410465665</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1726410465665</updated>
-    </task>
-    <task id="LOCAL-00036" summary=".">
-      <option name="closed" value="true" />
-      <created>1726410474059</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1726410474059</updated>
+      <workItem from="1727627920643" duration="3717000" />
+      <workItem from="1727870091098" duration="1850000" />
+      <workItem from="1727964939425" duration="3184000" />
+      <workItem from="1727972886235" duration="1693000" />
+      <workItem from="1728241009096" duration="3583000" />
     </task>
     <task id="LOCAL-00037" summary="add stuff">
       <option name="closed" value="true" />
@@ -556,7 +485,79 @@
       <option name="project" value="LOCAL" />
       <updated>1727208414834</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="migrate">
+      <option name="closed" value="true" />
+      <created>1727631212130</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1727631212130</updated>
+    </task>
+    <task id="LOCAL-00078" summary="a little change">
+      <option name="closed" value="true" />
+      <created>1727631266447</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1727631266447</updated>
+    </task>
+    <task id="LOCAL-00079" summary="migrate to psql">
+      <option name="closed" value="true" />
+      <created>1727631301930</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1727631301930</updated>
+    </task>
+    <task id="LOCAL-00080" summary="create">
+      <option name="closed" value="true" />
+      <created>1727980697877</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1727980697877</updated>
+    </task>
+    <task id="LOCAL-00081" summary="add search form">
+      <option name="closed" value="true" />
+      <created>1727980717621</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1727980717621</updated>
+    </task>
+    <task id="LOCAL-00082" summary="add search form">
+      <option name="closed" value="true" />
+      <created>1727980732603</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1727980732603</updated>
+    </task>
+    <task id="LOCAL-00083" summary="add post_search url">
+      <option name="closed" value="true" />
+      <created>1727980752666</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1727980752666</updated>
+    </task>
+    <task id="LOCAL-00084" summary="add post_search">
+      <option name="closed" value="true" />
+      <created>1728241054124</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1728241054124</updated>
+    </task>
+    <task id="LOCAL-00085" summary="delete csrf">
+      <option name="closed" value="true" />
+      <created>1728243372150</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1728243372150</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,13 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change to class-based view" />
-    <MESSAGE value="create from" />
-    <MESSAGE value="create ticket class" />
-    <MESSAGE value="add ticket url" />
-    <MESSAGE value="define ticket function" />
-    <MESSAGE value="register ticketadmin" />
-    <MESSAGE value="change charfield to choisefield" />
     <MESSAGE value="add stuff to ticket class" />
     <MESSAGE value="create ticket.html" />
     <MESSAGE value="add comment to admin" />
@@ -591,7 +585,6 @@
     <MESSAGE value="add validation" />
     <MESSAGE value="add comment url and change post_detail" />
     <MESSAGE value="change method" />
-    <MESSAGE value="migrate" />
     <MESSAGE value="new row" />
     <MESSAGE value="add simple tags and a inclusion tag" />
     <MESSAGE value="create index.html" />
@@ -599,6 +592,14 @@
     <MESSAGE value="add reading_time to Post" />
     <MESSAGE value="add render to index view" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="migrate" />
+    <MESSAGE value="a little change" />
+    <MESSAGE value="migrate to psql" />
+    <MESSAGE value="create" />
+    <MESSAGE value="add search form" />
+    <MESSAGE value="add post_search url" />
+    <MESSAGE value="add post_search" />
+    <MESSAGE value="delete csrf" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete csrf" />
   </component>
 </project>
