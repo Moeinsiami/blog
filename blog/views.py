@@ -2,6 +2,7 @@ from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.decorators.http import require_POST
+from django.contrib.postgres.search import SearchVector
 from blog.models import *
 from blog.forms import *
 
@@ -93,7 +94,7 @@ def post_search(request):
         form = SearchForm(data=request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
-            results = Post.published.filter(Q(title__contains=query) | Q(description__icontains=query))
+            results = Post.published.annotate(search=SearchVector('title', 'description')).filter(search=query)
     context = {
         'query': query,
         'results': results,
