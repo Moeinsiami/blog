@@ -3,6 +3,10 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django_jalali.db import models as jmodels
 from django.urls import reverse
+from django_resized import ResizedImageField
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
+import os
 
 
 # Managers
@@ -83,3 +87,29 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.name}: {self.post}"
+
+
+class Image(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='images', verbose_name='پست')
+    image_file = ResizedImageField(upload_to='post_images/', size=[500, 500])
+    title = models.CharField(max_length=250, verbose_name='عنوان', blank=True, null=True)
+    description = models.TextField(verbose_name='توضیحات', blank=True, null=True)
+    created = jmodels.jDateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created']
+        indexes = [
+            models.Index(fields=['created']),
+        ]
+        verbose_name = "تصویر"
+        verbose_name_plural = "تصویر ها"
+
+    def __str__(self):
+        return self.title if self.title else 'none'
+
+
+@receiver(post_delete, sender=Image)
+def delete_post_photo(sender, instance, **kwargs):
+    if instance.image_file:
+        if os.path.isfile(instance.image_file.path):
+            os.remove(instance.image_file.path)
