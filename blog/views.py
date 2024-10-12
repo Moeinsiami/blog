@@ -2,7 +2,7 @@ from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.decorators.http import require_POST
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, TrigramSimilarity
 from blog.models import *
 from blog.forms import *
 
@@ -28,7 +28,7 @@ def index(request):
 
 class PostListView(ListView):
     queryset = Post.published.all
-    paginate_by = 2
+    # paginate_by = 2
     template_name = 'blog/list.html'
     context_object_name = 'posts'
 
@@ -94,9 +94,9 @@ def post_search(request):
         form = SearchForm(data=request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
-            results = Post.published.annotate(search=SearchVector('title', 'description')).filter(search=query)
+            results = Post.published.annotate(similarity=TrigramSimilarity('title', query)).filter(similarity__gte=0.1).order_by('-similarity')
     context = {
         'query': query,
         'results': results,
     }
-    return render(request, 'blog/search.html',context)
+    return render(request, 'blog/search.html', context)
