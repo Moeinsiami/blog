@@ -94,9 +94,63 @@ def post_search(request):
         form = SearchForm(data=request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
-            results = Post.published.annotate(similarity=TrigramSimilarity('title', query)).filter(similarity__gte=0.1).order_by('-similarity')
+            results = Post.published.annotate(similarity=TrigramSimilarity('title', query)).filter(
+                similarity__gte=0.1).order_by('-similarity')
     context = {
         'query': query,
         'results': results,
     }
     return render(request, 'blog/search.html', context)
+
+
+def profile(request):
+    user = request.user
+    posts = Post.published.filter(author=user)
+
+    return render(request, 'blog/profile.html', {'posts': posts})
+
+
+def create_post(request):
+    if request.method == 'POST':
+        form = CreatePostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            Image.objects.create(image_file=form.cleaned_data['image1'], post=post)
+            Image.objects.create(image_file=form.cleaned_data['image2'], post=post)
+            post.save()
+            return redirect('blog:profile')
+    else:
+        form = CreatePostForm()
+    return render(request, 'forms/create_post.html', {'form': form})
+
+
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('blog:profile')
+    return render(request, 'forms/delete-post.html', {'post': post})
+
+
+def delete_image(request, image_id):
+    image = get_object_or_404(Image, id=image_id)
+    image.delete()
+    return redirect('blog:profile')
+
+
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+
+        form = CreatePostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            Image.objects.create(image_file=form.cleaned_data['image1'], post=post)
+            Image.objects.create(image_file=form.cleaned_data['image2'], post=post)
+            post.save()
+            return redirect('blog:profile')
+    else:
+        form = CreatePostForm(instance=post)
+    return render(request, 'forms/create_post.html', {'form': form, 'post': post})
