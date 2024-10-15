@@ -1,5 +1,5 @@
 from django import forms
-from blog.models import Comment
+from blog.models import Comment, Post
 
 
 class TicketForm(forms.Form):
@@ -40,3 +40,12 @@ class CommentForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     query = forms.CharField()
+
+
+class CreatePostForm(forms.ModelForm):
+    image1 = forms.ImageField(label="تصویر اول", widget=forms.FileInput(attrs={'class': 'form-control'}))
+    image2 = forms.ImageField(label="تصویر دوم", widget=forms.FileInput(attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = Post
+        fields = ['title', 'description', 'reading_time']
