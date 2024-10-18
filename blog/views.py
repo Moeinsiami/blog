@@ -1,8 +1,11 @@
 from django.db.models import Q
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, TrigramSimilarity
+from django.contrib.auth import authenticate, login
 from blog.models import *
 from blog.forms import *
 
@@ -103,6 +106,7 @@ def post_search(request):
     return render(request, 'blog/search.html', context)
 
 
+@login_required
 def profile(request):
     user = request.user
     posts = Post.published.filter(author=user)
@@ -110,6 +114,7 @@ def profile(request):
     return render(request, 'blog/profile.html', {'posts': posts})
 
 
+@login_required
 def create_post(request):
     if request.method == 'POST':
         form = CreatePostForm(request.POST, request.FILES)
@@ -125,6 +130,7 @@ def create_post(request):
     return render(request, 'forms/create_post.html', {'form': form})
 
 
+@login_required
 def delete_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     if request.method == 'POST':
@@ -133,6 +139,7 @@ def delete_post(request, post_id):
     return render(request, 'forms/delete-post.html', {'post': post})
 
 
+@login_required
 def delete_image(request, image_id):
     image = get_object_or_404(Image, id=image_id)
     image.delete()
@@ -154,3 +161,22 @@ def edit_post(request, post_id):
     else:
         form = CreatePostForm(instance=post)
     return render(request, 'forms/create_post.html', {'form': form, 'post': post})
+
+# def user_login(request):
+#     if request.method == "POST":
+#         form = LoginForm(request.POST)
+#         if form.is_valid():
+#             cd = form.cleaned_data
+#             user = authenticate(request, username=cd['username'], password=cd['password'])
+#             if user is not None:
+#                 if user.is_active:
+#                     login(request, user)
+#                     return redirect('blog:profile')
+#                 else:
+#                     return HttpResponse('Your account is disabled')
+#             else:
+#                 return HttpResponse('You are not logged in')
+#
+#     else:
+#         form = LoginForm()
+#     return render(request, 'forms/login.html', {'form': form})
