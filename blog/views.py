@@ -162,6 +162,7 @@ def edit_post(request, post_id):
         form = CreatePostForm(instance=post)
     return render(request, 'forms/create_post.html', {'form': form, 'post': post})
 
+
 # def user_login(request):
 #     if request.method == "POST":
 #         form = LoginForm(request.POST)
@@ -180,3 +181,16 @@ def edit_post(request, post_id):
 #     else:
 #         form = LoginForm()
 #     return render(request, 'forms/login.html', {'form': form})
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            Account.objects.create(user=user)
+            return render(request, 'registration/register_done.html', {'user': user})
+    else:
+        form = UserRegisterForm()
+    return render(request, 'registration/register.html', {'form': form})
