@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
@@ -14,26 +15,31 @@ def index(request):
     return render(request, 'blog/index.html')
 
 
-# def post_list(request):
-#     posts = Post.published.all()
-#     paginator = Paginator(posts, 1)
-#     page_number = request.GET.get('page', 1)
-#     try:
-#         posts = paginator.page(page_number)
-#     except EmptyPage:
-#         posts = paginator.page(paginator.num_pages)
-#     except PageNotAnInteger:
-#         posts = paginator.page(1)
-#     context = {
-#         'posts': posts,
-#     }
-#     return render(request, 'blog/list.html', context)
+def post_list(request, category=None):
+    if category is not None:
+        posts = Post.published.filter(category=category)
+    else:
+        posts = Post.published.all()
+    paginator = Paginator(posts, 3)
+    page_number = request.GET.get('page', 1)
+    try:
+        posts = paginator.page(page_number)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    print(posts, type(posts))
+    context = {
+        'posts': posts,
+        'category': category
+    }
+    return render(request, "blog/list.html", context)
 
-class PostListView(ListView):
-    queryset = Post.published.all
-    # paginate_by = 2
-    template_name = 'blog/list.html'
-    context_object_name = 'posts'
+# class PostListView(ListView):
+#     queryset = Post.published.all
+#     # paginate_by = 2
+#     template_name = 'blog/list.html'
+#     context_object_name = 'posts'
 
 
 def post_detail(request, pk):
@@ -194,3 +200,21 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'registration/register.html', {'form': form})
+
+
+@login_required
+def edit_account(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(request.POST, instance=request.user)
+        account_form = AccountEditForm(request.POST, instance=request.user.account, files=request.FILES)
+        if account_form.is_valid() and user_form.is_valid():
+            account_form.save()
+            user_form.save()
+    else:
+        user_form = UserEditForm(instance=request.user)
+        account_form = AccountEditForm(instance=request.user.account)
+    context = {
+        'account_form': account_form,
+        'user_form': user_form
+    }
+    return render(request, 'registration/edit_account.html', context)
