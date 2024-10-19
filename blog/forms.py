@@ -1,5 +1,5 @@
 from django import forms
-from blog.models import Comment, Post, User
+from blog.models import Comment, Post, User,Account
 
 
 class TicketForm(forms.Form):
@@ -48,7 +48,7 @@ class CreatePostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ['title', 'description', 'reading_time']
+        fields = ['title', 'description', 'reading_time', 'category']
 
 
 # class LoginForm(forms.Form):
@@ -56,8 +56,10 @@ class CreatePostForm(forms.ModelForm):
 #     password = forms.CharField(max_length=250, required=True, widget=forms.PasswordInput)
 
 class UserRegisterForm(forms.ModelForm):
-    password = forms.CharField(max_length=20, widget=forms.PasswordInput(attrs={'class': 'form-control'}),label='پسورد')
-    password2 = forms.CharField(max_length=20, widget=forms.PasswordInput(attrs={'class': 'form-control'}),label='تکرار پسورد')
+    password = forms.CharField(max_length=20, widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+                               label='پسورد')
+    password2 = forms.CharField(max_length=20, widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+                                label='تکرار پسورد')
 
     class Meta:
         model = User
@@ -68,3 +70,15 @@ class UserRegisterForm(forms.ModelForm):
         if cd['password'] != cd['password2']:
             raise forms.ValidationError('پسورد ها مطابقت ندارند!')
         return cd['password2']
+
+
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email']
+
+
+class AccountEditForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = ['date_of_birth', 'bio', 'job', 'photo']
